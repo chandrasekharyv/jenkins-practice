@@ -1,10 +1,13 @@
 pipeline {
     agent {
-    node {
-        label 'Agent'
-       
+        node {
+           label 'Agent'
+        }
+        
     }
-}
+    options {
+        ansiColor('xterm')
+    }
 
     stages {
         stage('Build') {
@@ -20,7 +23,20 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                error 'job is failure'
             }
+        }
+    }
+
+    post { 
+        always { 
+            echo 'I will always run job is success or not !'
+        }
+        success {
+            echo 'i will run when the job is success'
+        }
+        failuer {
+            echo 'i will run when job is failure'
         }
     }
 }
