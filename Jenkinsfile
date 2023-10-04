@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying......'
                 // error 'job is failure'
             }
         }
@@ -42,7 +42,7 @@ pipeline {
             echo 'i will run when the job is success'
         }
         failure {
-            echo 'i will run when job is failure'
+            echo 'it will run when job is failure'
         }
     }
 }
