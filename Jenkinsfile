@@ -13,6 +13,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building....'
+                sh '''
+                    ls -ltr
+                    pwd
+                    echo 'hello jenkins'
+
+                '''
             }
         }
         stage('Test') {
