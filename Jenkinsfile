@@ -35,7 +35,7 @@ pipeline {
         success {
             echo 'i will run when the job is success'
         }
-        failuer {
+        failure {
             echo 'i will run when job is failure'
         }
     }
