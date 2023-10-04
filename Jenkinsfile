@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                // error 'job is failure'
+                error 'job is failure'
             }
         }
     }
